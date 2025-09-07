@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-09-07T23:55:16 IST" name="Suite" finished-at="2025-09-07T23:55:38 IST" duration-ms="21728">
+    <groups>
+    </groups>
+    <test started-at="2025-09-07T23:55:16 IST" name="Test" finished-at="2025-09-07T23:55:38 IST" duration-ms="21728">
+      <class name="com.orangehrm.test.OrangeHRMTestCases">
+        <test-method is-config="true" signature="setupreport()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-07T23:55:16 IST" name="setupreport" finished-at="2025-09-07T23:55:16 IST" duration-ms="218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupreport -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-07T23:55:17 IST" name="setup" finished-at="2025-09-07T23:55:22 IST" duration-ms="4125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="searchProject(java.lang.String,java.lang.String)[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-07T23:55:22 IST" name="searchProject" data-provider="projectdata" finished-at="2025-09-07T23:55:37 IST" duration-ms="15569" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[tomsmith]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[SuperSecretPassword!]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProject -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-07T23:55:37 IST" name="teardown" finished-at="2025-09-07T23:55:38 IST" duration-ms="1068" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+        <test-method is-config="true" signature="flushreport()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-07T23:55:38 IST" name="flushreport" finished-at="2025-09-07T23:55:39 IST" duration-ms="581" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- flushreport -->
+      </class> <!-- com.orangehrm.test.OrangeHRMTestCases -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
