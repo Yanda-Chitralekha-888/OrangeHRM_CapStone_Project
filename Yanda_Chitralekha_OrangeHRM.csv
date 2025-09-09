@@ -1,0 +1,664 @@
+﻿Test Case ID,Test Scenario,Precondition,Test Condition,Test Case Steps,Test Data,Expected Result,Actual Result Iteration 1,Status Iteration 1,Actual Result Iteration 2,Status Iteration 2,Comments
+TC_EP1_001,Verify successful login with valid credentials,OrangeHRM login page should available,User should login with valid username and password,"1. Open Browser
+2. Navigate to url
+3. Enter valid username
+4. Enter valid password                       5. Click Login button
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Username: Admin, Password: admin123",User should be successfully logged in and redirected to dashboard page with proper navigation menu visible,User  logged in and redirected to homepage,Passed,,,
+TC_EP1_002,Verify login failure with invalid username,OrangeHRM login page should available,User should enter invalid username with valid password,"1. Open Browser
+2. Navigate to 
+3. Enter invalid username: 'InvalidUser'
+4. Enter valid password
+5. Click Login button
+","1.https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Username: InvalidUser, Password: admin123","Login should fail and display 'Invalid credentials' error message, user remains on login page","User didn’t logged in and the error messgae displayed of ""Invalid Credentials""",Passed,,,
+TC_EP1_003,Verify login failure with invalid password,OrangeHRM login page should available,User should enter valid username with invalid password,"1. Open Browser
+2. Navigate to url
+3. Enter valid username
+4. Enter invalid password
+5. Click Login button
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Username: Admin, Password: wrongpassword","Login should fail and display 'Invalid credentials' error message, user remains on login page","Error Messge dispalyed of ""Invalid Credentials"" and remained on HomePage",Passed,,,
+TC_EP1_004,Verify login failure with empty username field,OrangeHRM login page should available,Username field should be left empty,"1. Open Browser
+2. Navigate to url
+3. Leave username field empty
+4. Enter valid password
+5. Click Login button
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Username: Admin, Password: wrongpassword","Validation message 'Required' should appear under username field, login should not proceed","Validation message 'Required' is appeared  under username field, login is not proceeding",Passed,,,
+TC_EP1_005,Verify login failure with empty password field,OrangeHRM login page should available,Password field should be left empty,"1. Open Browser
+2. Navigate to url                                     3. Enter valid username:
+4. Leave password field empty
+5. Click Login button","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Username: Admin, Password: (empty)","Validation message 'Required' should appear under password field, login should not proceed","Validation message 'Required' should appear under password field, login is not proceeding",Passed,,,
+TC_EP1_006,Verify forgot password link functionality,OrangeHRM login page should available,Forgot password link should be clickable and functional,"1. Open Browser
+2. Navigate to url                                     3. Click on 'Forgot your password?' link
+4. Verify forgot password page loads
+5. Check reset password form is displayed","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Forgot password link",Forgot password page should load with reset password form containing username field and reset button,Forgot password page is loading with reset password form containing username field and reset button,Passed,,,
+TC_EP1_007,Verify successful logout functionality, OrangeHRM dashboard should be available,User should be able to logout successfully,"1. Login to OrangeHRM with valid credentials
+2. Navigate to any module (e.g., Dashboard)
+3. Click on user profile dropdown in top-right corner
+4. Click on 'Logout' option
+
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Logged in user session","User should be successfully logged out and redirected to login page, session should be terminated and back button should not allow access",The User has successfully logged out and  redirected to Login Page.,Passed,,,
+TC_EP2_008,Verify dashboard loads successfully after login, OrangeHRM dashboard should be available,Dashboard should display all key widgets and information,"1. Open Browser
+2. Navigate to url                                     3. Login to OrangeHRM with valid credentials
+4. Verify dashboard page loads
+5. Check 'Time at Work' widget is displayed
+6. Check 'My Actions' widget is displayed
+7. Check 'Quick Launch' widget is displayed
+8. Check 'Buzz Latest Posts' widget is displayed
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Valid login credentials","Dashboard should load completely with all widgets visible: Time at Work, My Actions, Quick Launch, Buzz Posts, and employee distribution charts","Logged in with credentials every module is visible including Time at Work,My Actions,Quick Launch,
+Buzz Latest Reports and Employee Distribution chart ",Passed,,,
+TC_EP2_009,Verify main navigation menu accessibility, OrangeHRM dashboard should be available,All main navigation menu items should be accessible,"1. Open Browser
+2. Navigate to url                                               1. Login to OrangeHRM system
+2. Verify main navigation menu is visible on left side
+3. Check Admin menu item is accessible
+4. Check PIM menu item is accessible
+5. Check Leave menu item is accessible
+6. Check Time menu item is accessible
+7. Check Recruitment menu item is accessible
+8. Check My Info menu item is accessible
+9. Check Performance menu item is accessible
+10. Check Dashboard menu item is accessible","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Logged in user with appropriate permissions","All main navigation menu items should be visible and clickable, leading to respective modules when selected",The Dashboard Menu is on left all the modues on the left are accessible,Passed,,,
+TC_EP2_010,Verify My Actions widget displays pending tasks, OrangeHRM dashboard should be available,My Actions widget should show pending tasks accurately,"1. Open Browser
+2. Navigate to url                                  1. Login to OrangeHRM system
+2. Navigate to Dashboard
+3. Locate 'My Actions' widget
+4. Verify pending leave requests are displayed
+5. Verify pending timesheets are displayed
+6. Verify pending performance reviews are displayed
+7. Click on any pending action item
+8. Verify navigation to relevant page","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.User account with pending tasks/actions","My Actions widget should display all pending tasks with correct count, clicking should navigate to relevant module for action",There is no pending leaves are displayed,Failed,,,
+TC_EP2_011,Verify Quick Launch functionality, OrangeHRM dashboard should be available,Quick Launch options should provide shortcuts to common tasks,"1. Open Browser
+2. Navigate to url                                       3. Navigate to Dashboard
+3. Locate 'Quick Launch' widget
+4. Click on 'Assign Leave' option
+5.navigation to assign leave page
+6. Go back to dashboard
+7. Click on 'Leave List' option
+8.  navigation to leave list page
+9. Go back to dashboard
+10. Click on 'Timesheets' option
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Dashboard with Quick Launch widget","Quick Launch options should provide direct navigation to: Assign Leave, Leave List, Timesheets, Apply Leave, My Leave, and My Timesheet pages",The Quicl launch Widget is displayed with options as mentioned,Passed,,,
+TC_EP3_012,Verify add new employee functionality, OrangeHRM dashboard should be available and navigate to PIM,Admin should be able to add new employee with required information,"1. Open Browser
+2. Navigate to url                                                     1. Login as Admin user
+2. Navigate to PIM module
+3. Click on 'Add Employee' option
+4. Enter First Name
+5. Enter Last Name
+6. Enter Employee ID
+7. Upload employee photograph
+8. Click Save button
+9. Check employee appears in employee list","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.First Name: John, Last Name: Doe, Employee ID: EMP001, Photo file","New employee should be added successfully with confirmation message, employee should appear in employee list with correct details",The Employee is added Sucessfully and appeard in list,Passed,,,
+TC_EP3_013,Verify employee search functionality, OrangeHRM dashboard should be available and navigate to PIM,User should be able to search for employees using various criteria,"1. Open Browser
+2. Navigate to url                                         1. Login to OrangeHRM system
+2. Navigate to PIM module
+3. Click on 'Employee List'
+4. Enter employee name in search field: 'John Doe'
+5. Click Search button
+6. Verify search results display matching employees
+7. Clear search and search by Employee ID: 'EMP001'
+8. Verify search results are accurate
+9. Test search with partial name
+10. Verify search functionality works correctly","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Employee Name: John Doe, Employee ID: EMP001","Search should return accurate results based on search criteria, partial name search should work, no results message should appear for invalid searches",The Search funcationaliy is working ,Passed,,,
+TC_EP3_014,Verify employee personal information update, OrangeHRM dashboard should be availableand navigate to PIM,Employee should be able to update their personal information,"1. Open Browser
+2. Navigate to url                                        1. Login as employee or admin
+2. Navigate to PIM module or My Info
+3. Search and select employee
+4. Click on Personal Details tab
+5. Update First Name 
+6. Update Date of Birth
+7. Update Nationality
+8. Update Marital Status
+9. Click Save button
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Employee: John Doe, New Name: Jonathan, DOB: 01/01/1990, Nationality: American, Marital Status: Married","Personal information should be updated successfully with confirmation message, updated information should be saved and displayed correctly",The Persoanl Info ahs updated with the given data,Passed,,,
+TC_EP3_015,Verify employee employment status management, OrangeHRM dashboard should be available and navigate to PIM,HR admin should be able to update employee employment status,"1. Open Browser
+2. Navigate to url                                      1. Login as Admin/HR user
+2. Navigate to PIM module
+3. Search and select employee
+4. Click on Job tab
+5. Update Employment Status to 'Active'
+6. Update Job Title to 'Senior Developer'
+7. Update Department
+8. Set Joined Date
+9. Click Save button
+10. Verify employment details are updated","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Employee: John Doe, Status: Active, Job Title: Senior Developer, Department: IT","Employment status and job details should be updated successfully, changes should be reflected in employee records and reports",There  active status is not avalible in Employment status,Failed,,,
+TC_EP4_016,Verify employee can apply for leave successfully,OrangeHRM dashboard should be available  and navigate to Leave,Employee should be able to apply for leave with valid details,"1. Login as employee
+2. Navigate to Leave module
+3. Click on 'Apply Leave'
+4. Select Leave Type
+5. Select From Date
+6. Select To Date
+7. Enter comments
+8. Click Apply button
+
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Leave Type: Annual Leave, From Date: Next working day, To Date: Following day, Comments: Personal work","Leave application should be submitted successfully with confirmation message, leave should appear in My Leave list with 'Pending Approval' status",After clicking on apply leave there no option to select leave type,Failed,,,
+TC_EP4_017,Verify supervisor can approve leave requests,OrangeHRM dashboard should be available  and navigate to Leave,Supervisor should be able to approve employee leave requests,"1. Open Browser
+2. Navigate to url                                      1. Login as supervisor/admin
+2. Navigate to Leave module
+3. Click on 'Leave List'
+4. Filter for 'Pending Approval' status
+5. Locate the leave request to approve
+6. Select the leave request
+7. Click on 'Approve' button
+8. Add approval comments if needed
+9. Confirm approval
+10. Verify leave status changes to 'Approved'","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Pending leave request for employee","Leave request should be approved successfully, status should change to 'Approved', employee should be notified of approval","There are not leaves in the list ,its is showing No Records Found",Failed,,,
+TC_EP4_018,Verify employee can view leave balance,OrangeHRM dashboard should be available  and navigate to Leave,Employee should be able to view current leave balance,"1. Open Browser
+2. Navigate to url                                     1. Login as employee
+2. Navigate to Leave module
+3. Click on 'My Leave'
+4. Click on 'Leave Balance' tab or link
+5. check all leave types are displayed
+6. Check leave balance for 'Annual Leave'
+7. Check leave balance for 'Sick Leave'
+8. Verify used leave and remaining balance
+9. Check leave period information
+10. Verify balance calculations are accurate","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Employee with leave entitlements","Leave balance should display correctly showing all leave types, used leave, remaining balance, and leave period details accurately",There is no option of leave balance,Failed,,,
+TC_EP4_019,Verify leave type configuration by admin,OrangeHRM dashboard should be available  and navigate to Leave,Admin should be able to configure different leave types and policies,"1. Open Browser
+2. Navigate to url                                                  1. Login as Admin
+2. Navigate to Leave module
+3. Click on 'Configure' menu
+4. Click on 'Leave Types'
+5. Click 'Add' to create new leave type
+6. Enter Leave Type Name
+7. Set leave type properties
+8. Define eligibility rules
+9. Click Save button","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Leave Type: Maternity Leave, Properties: 90 days max, Gender: Female only",New leave type should be created successfully and available in leave application dropdowns with correct properties and eligibility rules applied, There is no option of leaveType properties and eligibility rules,Failed,,,
+TC_EP5_020,Verify employee timesheet submission,OrangeHRM dashboard should be available  and navigate to Time,Employee should be able to create and submit timesheet,"1. Open Browser
+2. Navigate to url                                  1. Login as employee
+2. Navigate to Time module
+3. Click on 'My Timesheets'
+4. Select current week timesheet
+5. Click 'Edit' button
+6. Add time entry for Monday: Project A - 8 hours
+7. Add time entry for Tuesday
+8. Add comments for each entry
+9. Click Save button
+10. Click Submit for Approval
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login 
+2. Project A: 8 hours on Monday, Project B: 7 hours on Tuesday, Comments for each entry","Timesheet should be saved and submitted successfully, status should change to 'Submitted', supervisor should receive notification for approval","Timesheet saved and submitted successfully, status changed to 'Submitted', supervisor receive notification for approval",Passed,,,
+TC_EP5_021,Verify supervisor timesheet approval,OrangeHRM dashboard should be available  and navigate to Time,Supervisor should be able to approve employee timesheets,"1. Open Browser
+2. Navigate to url                                   1. Login as supervisor
+2. Navigate to Time module
+3. Click on 'Employee Timesheets'
+4. Filter for timesheets pending approval
+5. Select timesheet to review
+6. Review time entries and comments
+7. Click 'Approve' button
+8. Add supervisor comments
+9. Confirm approval
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login 
+2. Employee timesheet with 40 hours for the week","Timesheet should be approved successfully, status should change to 'Approved', employee should be notified, hours should be available for payroll processing",There is not pending approval visible to filter.,Failed,,,
+TC_EP5_022,Verify project time tracking functionality,OrangeHRM dashboard should be available  and navigate to Time,Employee should be able to track time against specific projects,"1. Open Browser
+2. Navigate to url                                  1. Login as employee
+2. Navigate to Time module
+3. Click on 'My Timesheets'
+4. Create new timesheet entry
+5. Select Project  Development'
+6. Select Activity                              7.Enter hours
+8. Enter description                               9. Save entry
+ correct project","Project: Website Development, Activity: Development, Hours: 6.5, Description: Frontend work","Time should be tracked against specific project and activity, project managers should be able to view time spent on their projects",Enable to create timesheet,Failed,,,
+TC_EP5_023,Verify attendance report generation,OrangeHRM dashboard should be available  and navigate to Time,HR admin should be able to generate attendance reports,"1. Open Browser
+2. Navigate to url                                 1. Login as HR Admin
+2. Navigate to Time module
+3. Click on 'Reports'
+4. Select 'Attendance Report'
+5. Set date range: Last month
+6. Select employee or department
+7. Choose report format: PDF/Excel
+8. Click Generate button
+9. Verify report is generated
+10. Review report data for accuracy","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login 
+2. Date Range: Last month, Employee: All employees, Format: PDF","Attendance report should be generated successfully containing accurate data for attendance, late arrivals, early departures, and total hours worked","Attendance report generated successfully containing data for attendance, late arrivals, early departures, and total hours worked",Passed,,,
+TC_EP6_024,Verify performance review creation by supervisor,OrangeHRM dashboard should be available and navigate to Performance,Supervisor should be able to create performance reviews for team members,"1. Open Browser
+2. Navigate to url                                  1. Login as supervisor
+2. Navigate to Performance module
+3. Click on 'Manage Reviews'
+4. Click 'Add Review' button
+5. Select employee for review
+6. Select review period
+7. Select review template
+8. Set review due date
+9. Add reviewers (self, supervisor, peers)
+10. Click Save button
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login 
+2.Employee: John A Doe, Review Period: Annual 2024, Due Date: Next month, Reviewers: Self + Supervisor","Performance review should be created successfully, all assigned reviewers should receive notifications, review should appear in pending reviews list","Performance review created successfully, unable to assign  reviewers, review not apeared in pending reviews list",Failed,,,
+TC_EP6_025,Verify employee can view performance goals,OrangeHRM dashboard should be available and navigate to Performance,Employee should be able to view their assigned performance goals,"1. Open Browser
+2. Navigate to url                                  1. Login as employee
+2. Navigate to Performance module
+3. Click on 'My Goals' or 'Goals'
+4. View list of assigned goals
+5. Click on specific goal to view details
+6. Check goal description, target, and deadline
+7. Verify goal status and progress tracking
+8. Review goal comments and updates
+9. Check ability to update goal progress
+",Employee with assigned performance goals,"Employee should be able to view all assigned goals with complete details, progress tracking should be available, goal alignment should be clear","Employee unable to view all assigned goals, progress tracking not available.",Failed,,,
+TC_EP6_026,Verify performance review cycle configuration,OrangeHRM dashboard should be available and navigate to Performance,HR admin should be able to configure performance review cycles,"1. Open Browser
+2. Navigate to url                                    1. Login as HR Admin
+2. Navigate to Performance module
+3. Click on 'Configure' menu
+4. Select 'Performance Review Cycle'
+5. Click 'Add Cycle' button
+6. Enter cycle name: 'Annual Review 2024'
+7. Set review start and end dates
+8. Define review stages and timeline
+9. Select review template
+10. Set employee eligibility criteria
+11. Save configuration
+12. Verify cycle is created and active","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login 
+2.Cycle: Annual Review 2024, Duration: 6 months,Eligibility:Past employees","Review cycle should be configured successfully, eligible employees should be automatically included.","Review cycle not configured successfully, eligible employees not automatically included.",Failed,,,
+TC_EP6_027,Verify employee self-review completion,OrangeHRM dashboard should be available and navigate to Performance,Employee should be able to complete self-review assessment,"1. Open Browser
+2. Navigate to url                                   1. Login as employee
+2. Navigate to Performance module
+3. Click on 'My Reviews'
+4. Select pending self-review
+5. Complete competency ratings
+6. Answer performance questions
+7. Set goals for next period
+8. Add self-assessment comments
+9. Upload supporting documents
+10. Submit self-review
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login 
+2. Performance review with self-assessment section, competency ratings, goals, and comments","Self-review should be completed and submitted successfully, supervisor should be notified, review status should update to show self-review completion",Self-review completed and submitted successfully.,Passed,,,
+TC_EP7_028,Verify job vacancy ,OrangeHRM dashboard should be available and navigate to Recruitement,HR admin should be able to create new job vacancies,"1. Open Browser
+2. Navigate to url                                   1. Login as HR Admin
+2. Navigate to Recruitment module
+3. Click on 'Vacancies'
+4. Click 'Add Vacancy' button
+5. Enter Job Title
+6. Enter Job Description
+7. Select Hiring Manager
+
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login 
+2.Job Title: Senior PayRoll admin, Hiring Manager: Rahul Patil,Vacancy:Payroll Adminstrator","Job vacancy should be created successfully, vacancy should be visible to candidates, hiring manager should be notified of new vacancy","Job vacancy not shown successfully, job title not  visible to candidates.",Failed,,,
+TC_EP7_029,Verify candidate application review,OrangeHRM dashboard should be available and navigate to Recruitement,Hiring manager should be able to review candidate applications,"1. Open Browser
+2. Navigate to url                                   3. Login as hiring manager
+4. Navigate to Recruitment module
+5. Click on 'Candidates'
+6. Filter applications for specific vacancy
+5. Select candidate application to review
+6. Review candidate resume and cover letter
+7. Check candidate qualifications against job requirements
+8. Update candidate status (Shortlisted/Rejected)
+9. Add interview notes or comments
+10. Schedule interview if shortlisted
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Candidate applications with resumes, cover letters, and application data","Candidate applications should be reviewable with all submitted information, status updates should work correctly, notifications should be sent appropriately","Candidate applications reviewable with all submitted information, status updates  working correctly.",Passed,,,
+TC_EP7_030,Verify interview scheduling functionality,OrangeHRM dashboard should be available and navigate to Recruitement,Recruiter should be able to schedule interviews with candidates,"1. Open Browser
+2. Navigate to url                                           3. Login as recruiter
+4. Navigate to Recruitment module
+5. Select shortlisted candidate
+6. Click 'Schedule Interview' button
+8. Choose interview date and time
+9. Add interview location/meeting link
+10. Select interviewers from staff list
+11. Add interview notes or instructions
+12. Send interview invitation
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login 
+2.Candidate: Jane Smith, Interview Type: Video, Date: Next week, Interviewers: Tech Lead + HR Manager","Interview should be scheduled successfully, candidate and interviewers should receive notifications with meeting details, interview should appear in calendar",,Passed,,,
+TC_EP7_031,Verify recruitment metrics tracking,OrangeHRM dashboard should be available and navigate to Recruitement,HR admin should be able to track recruitment metrics and KPIs,"1. Open Browser
+2. Navigate to url                                  1. Login as HR Admin
+2. Navigate to Recruitment module
+3. Click on 'Reports' or 'Analytics'
+4. Select recruitment dashboard
+5. Review time-to-fill metrics
+6. Check cost-per-hire calculations
+7. Analyze source of hire data
+8. Review interview-to-hire ratios
+9. Check candidate pipeline status
+10. Export recruitment report
+11. Verify data accuracy and completeness","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Historical recruitment data for last 6 months","Recruitment metrics should be accurate and up-to-date, reports should be exportable, dashboard should provide actionable insights for hiring decisions","Recruitment metrics displayed correctly, reports exported successfully, dashboard provided insights",Passed,,,
+TC_EP8_032,Verify user account creation and role assignment,OrangeHRM dashboard should be available and navigate to Admin,System admin should be able to create user accounts and assign roles,"1. Open Browser
+2. Navigate to url                                  1. Login as System Admin
+2. Navigate to Admin module
+3. Click on 'User Management'
+4. Click 'Add User' button
+5. Enter username
+6. Select user role
+7. Select employee from list
+8. Set password requirements
+9. Enable/disable user account
+10. Set access permissions
+11. Save user account
+","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Username: jdoe_hr, Role: HR Manager, Employee: John Doe, Status: Enabled","User account should be created successfully with assigned role and permissions, user should be able to login with correct access level","User account created with correct role and permissions, login successful",Passed,,,
+TC_EP8_033,Verify system configuration management,OrangeHRM dashboard should be available and navigate to Admin,System admin should be able to configure system settings,"1. Open Browser
+2. Navigate to url                                             1. Login as System Admin
+2. Navigate to Admin module
+3. Click on 'Configuration'
+4. Update organization information
+5. Configure email notification settings
+6. Set up system themes and branding
+7. Configure date and time formats
+8. Set password policy requirements
+9. Configure backup settings
+10. Save configuration changes
+","1. https://opensource-demo.orangehrmlive.com/web        2.Organization: ABC Company, Email: SMTP settings, Theme: Corporate, Password: 8 chars minimum","System configuration should be updated successfully, all settings should be applied across the system, users should see updated branding and formats","Configuration changes applied system-wide, branding and formats updated successfully",Passed,,,
+TC_EP8_034,Verify data backup and maintenance functionality,OrangeHRM dashboard should be available and navigate to Admin,System admin should be able to backup system data and perform maintenance,"1. Open Browser
+2. Navigate to url                                             1. Login as System Admin
+2. Navigate to Admin module
+3. Click on 'Maintenance' section
+4. Select 'Data Backup' option
+5. Choose backup type (Full/Incremental)
+6. Select backup location
+7. Set backup schedule
+8. Initiate backup process
+9.backup completion
+10. Test data restoration process
+11. Check system performance optimization tools","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Backup Type: Full backup, Schedule: Weekly, Location: Cloud storage","Data backup should be completed successfully, backup files should be accessible, restoration process should work correctly, system maintenance tools should be functional","Full backup completed, files accessible, restoration verified, maintenance tools worked",Passed,,,
+TC_EP8_035,Verify system reports and analytics generation,OrangeHRM dashboard should be available and navigate to Admin,System admin should be able to generate system usage and performance reports,"1. Open Browser
+2. Navigate to url                                                   1. Login as System Admin
+2. Navigate to Admin module
+3. Click on 'Reports' section
+4. Select 'System Usage Report'
+5. Set report date range
+6. Choose report parameters
+7. Select report format (PDF/Excel/CSV)
+8. Generate report
+9. Review system performance metrics
+10. Check user activity logs
+11. Export report for analysis
+12. Verify report data accuracy","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Report Period: Last 3 months, Format: Excel, Parameters: All users and modules","System reports should be generated successfully with accurate data, performance metrics should be detailed, user activity should be trackable, reports should be exportable","Reports generated in Excel with accurate data, performance metrics detailed, user activity tracked, export successful",Passed,,,
+TC_INTEGRATION_036,Verify end-to-end employee lifecycle management,OrangeHRM dashboard should be available and navigate to Recruitement,Complete employee journey from hiring to performance review,"1. Open Browser
+2. Navigate to url                                       1. Login as HR Admin
+2. Create job vacancy for 'Marketing Manager'
+3. Review and shortlist candidate application
+4. Schedule and conduct interview
+5. Hire candidate and create employee record
+6. Set up employee access and permissions
+7. Configure leave entitlements
+8. Employee applies for leave
+9. Supervisor approves leave
+10. Employee submits timesheet
+11. Create performance review
+12. Complete review cycle","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Complete employee data from recruitment to performance management","Full employee lifecycle should work seamlessly across all modules, data should flow correctly between recruitment, PIM, leave, time, and performance modules","Employee lifecycle completed successfully, data flowed across all modules without issues",Passed,,,
+TC_SECURITY_037,Verify role-based access control functionality,OrangeHRM dashboard should be available and navigate to Recruitement,Different user roles should have appropriate access permissions,"1. Open Browser
+2. Navigate to url                                         1. Create test users with different roles 
+2. Login as Employee user
+3. Verify limited access to only relevant modules
+4. Attempt to access Admin functions (should be restricted)
+5. Login as Supervisor
+6. Verify access to team management functions
+7. Login as HR user
+8. Verify access to HR-specific functions
+9. Login as Admin
+10. Verify full system access
+11. Test permission boundaries for each role","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Test users: Admin, HR Manager, Supervisor, Employee with different access levels","Role-based access should work correctly, users should only access functions appropriate to their role, unauthorized access attempts should be blocked","Role-based restrictions applied correctly, unauthorized access blocked",Passed,,,
+TC_USABILITY_038,Verify system navigation and user experience,System should be fully functional with test data,System should provide intuitive navigation and user-friendly experience,"1. Open Browser
+2. Navigate to url                                    1. Login to system with different user types
+2. Test main navigation menu responsiveness
+3. Verify breadcrumb navigation works correctly
+4. Test search functionality across modules
+5. Verify error messages are clear and helpful
+6. Test form validation and user feedback
+7. Check responsive design on different screen sizes
+8. Verify loading times for different pages
+9. Test browser compatibility
+10. Check accessibility features","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Multiple browsers, different screen sizes, various user scenarios","System should provide smooth navigation, responsive design, clear error messages, fast loading times, and good accessibility across different browsers and devices","Navigation smooth, design responsive, error messages clear, loading fast, accessibility features functional",Passed,,,
+TC_EDGE_039,Verify system behavior with maximum data limits,System configured with test data,System should handle maximum data volumes gracefully,"1. Open Browser
+2. Navigate to url                                         1. Create maximum allowed employees in system
+2. Test system performance with large employee list
+3. Apply bulk leave applications
+4. Generate large reports
+5. Test search with maximum result sets
+6. Verify system stability under load
+7. Check memory usage and response times","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Maximum system capacity test data","System should maintain performance and stability with maximum data volumes, error handling should be graceful","System stable under maximum data load, performance acceptable, errors handled gracefully",Passed,,,
+TC_DATA_040,Verify data validation and integrity,Clean test environment,System should maintain data integrity and validate inputs correctly,"1. Open Browser
+2. Navigate to url                                     1. Test special characters in employee names
+2. Test date boundary values (past/future dates)
+3. Verify email format validation
+4. Test numeric field boundaries
+5. Check mandatory field validation
+6. Test data consistency across modules
+7. Verify audit trail functionality","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Various invalid data inputs and edge cases","Data validation should work correctly, integrity should be maintained, invalid data should be rejected with clear messages","Data validation worked, integrity maintained, invalid inputs rejected with proper messages",Passed,,,
+TC_BUZZ_041,Verify employee can create and share buzz posts,Employee logged in with Buzz module access,Employee should be able to create and share posts in Buzz feed,"1. Open Browser
+2. Navigate to url                                     1. Login as employee
+2. Navigate to Buzz module
+3. Click on 'What's on your mind?' text area
+4. Enter post content: 'Team meeting success!'
+5. Attach image if desired
+6. Set post visibility (Public/Team)
+7. Click 'Share' button
+8. Verify post appears in buzz feed
+9. Check post timestamp and author
+10. Verify other employees can view post","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Post content: Team meeting success!, Visibility: Public, Optional image attachment","Post should be created and visible in buzz feed, other employees should be able to view, like, and comment on the post","User was able to successfully post a new Buzz message, and it appeared on the Buzz feed.",Passed,,,
+TC_BUZZ_042,Verify employee engagement features in Buzz,Buzz posts exist in the system,"Employees should be able to like, comment, and share posts","1. Open Browser
+2. Navigate to url                                               1. Login as employee
+2. Navigate to Buzz module
+3. View existing posts in feed
+4. Click 'Like' on a post
+5. Add comment to the post
+6. Share post with team
+7. View post engagement statistics
+8. Check notification for likes/comments
+9. Verify engagement counters update correctly","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Existing buzz posts from other employees","Like, comment, and share features should work correctly, engagement counters should update, notifications should be sent appropriately","User successfully liked the Buzz message, and the like count increased.  ",Passed,,,
+TC_DIRECTORY_043,Verify employee directory search functionality,Employee directory populated with data,Users should be able to search and view employee directory,"1. Open Browser
+2. Navigate to url                                  1. Login to OrangeHRM system
+2. Navigate to Directory module
+3. View complete employee directory
+4. Search by employee name: 'John'
+5. Filter by job title: 'Manager'
+6. Filter by location: 'New York'
+7. View employee contact details
+8. Check employee photo display
+9. Verify search result accuracy
+10. Test clear filters functionality","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Employee directory with various employees, job titles, and locations","Directory should display all employees, search and filtering should work accurately, employee details should be complete and accessible"," User successfully posted a comment on the Buzz message, and the comment appeared instantly.  ",Failed,,,
+TC_CLAIM_044,Verify employee expense claim submission,Employee logged in with claim access and expense data,Employee should be able to submit expense claims for reimbursement,"1. Open Browser
+2. Navigate to url                                  1. Login as employee
+2. Navigate to Claim module
+3. Click 'Submit Claim' button
+4. Select event/expense type: 'Business Travel'
+5. Enter claim amount: $500
+6. Add description: 'Client meeting travel'
+7. Upload receipts/supporting documents
+8. Set claim date
+9. Submit claim for approval
+10. Verify claim submission confirmation","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Expense Type: Business Travel, Amount: $500, Description: Client meeting, Receipt documents","Expense claim should be submitted successfully, claim should appear in employee's claim list, supervisor should receive approval notification"," User successfully shared the Buzz message, and it appeared in their Buzz feed.  ",Passed,,,
+TC_CLAIM_045,Verify claim approval workflow,Pending expense claims exist in system,Supervisors should be able to review and approve expense claims,"1. Open Browser
+2. Navigate to url                                            1. Login as supervisor/manager
+2. Navigate to Claim module
+3. View pending claims list
+4. Select claim for review
+5. Review claim details and receipts
+6. Verify expense against company policy
+7. Add approval/rejection comments
+8. Approve or reject the claim
+9. Verify status update
+10. Check notification to employee","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Pending expense claim with supporting documents","Claim should be reviewable with all details, approval/rejection should update status, employee should receive notification of decision"," User was able to delete their Buzz post, and it was removed from the feed.  ",Failed,,,
+TC_NEGATIVE_046,Verify system behavior with invalid file uploads,System should handle invalid file types,System should reject invalid file uploads with appropriate error messages,"1. Open Browser
+2. Navigate to url                                  1. Login to system
+2. Navigate to employee profile
+3. Attempt to upload invalid file type (.exe) as photo
+4. Try uploading oversized image file
+5. Upload file with special characters in name
+6. Test uploading corrupted file
+7. Verify error messages are displayed
+8. Check system stability after invalid uploads","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Invalid files: .exe file, oversized image, corrupted file, special character filename","Invalid files should be rejected with clear error messages, system should remain stable, only valid file types should be accepted"," System restricted the post to the maximum allowed characters, and extra characters were not accepted.  ",Failed,,,
+TC_PERFORMANCE_047,Verify system performance under concurrent user load,Multiple user accounts available,System should maintain performance with multiple concurrent users,"1. Open Browser
+2. Navigate to url                                     1. Simulate  user logins
+2. Have users perform various operations simultaneously
+3. Monitor system response times
+4. Check database connection handling
+5. Verify no data corruption occurs
+6. Test session management
+7. Check system resource utilization
+8. Monitor error rates during peak load","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.20+ concurrent users performing various operations","System should handle concurrent users without significant performance degradation, response times should remain acceptable, no data corruption should occur",User was not able to delete another user’s post; delete option was unavailable.  ,Failed,,,
+TC_MOBILE_048,Verify mobile responsiveness and functionality,OrangeHRM system accessible via mobile device,System should work properly on mobile devices with responsive design,"1. Open Browser
+2. Navigate to url                                           1. Access OrangeHRM from mobile browser
+2. Test login functionality on mobile
+3. Verify navigation menu works on small screen
+4. Test form filling on mobile device
+5. Check touch interactions
+6. Verify responsive layout adjustments
+7. Test portrait/landscape orientation
+8. Check mobile-specific features","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Mobile device with various screen sizes and orientations","System should be fully functional on mobile devices, layout should be responsive, all features should work with touch interface","User successfully posted a Buzz message with attachments, and attachments were visible.  ",Passed,,,
+TC_BROWSER_049,Verify cross-browser compatibility,Different web browsers available for testing,System should work consistently across different web browsers,"1. Test system on Chrome browser
+2. Test system on Firefox browser
+3. Test system on Safari browser
+4. Test system on Edge browser
+5. Verify consistent functionality across browsers
+6. Check CSS rendering differences
+7. Test JavaScript functionality
+8. Verify form submissions work in all browsers","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Chrome, Firefox, Safari, Edge browsers","System should work consistently across all major browsers, functionality should be identical, UI should render correctly",User successfully searched and located the desired Buzz post using keywords,Failed,,,
+TC_API_050,Verify API endpoints and data exchange,API access configured and documentation available,System APIs should work correctly for data exchange and integration,"1. Open Browser
+2. Navigate to url                                       1. Test employee data API endpoints
+2. Verify authentication for API access
+3. Test data retrieval operations
+4. Test data creation/update operations
+5. Check API response formats (JSON/XML)
+6. Verify error handling in APIs
+7. Test rate limiting if implemented
+8. Check API documentation accuracy","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.API endpoints for employee, leave, time tracking data","APIs should work correctly with proper authentication, data exchange should be accurate, error handling should be robust",User successfully logged out and was redirected to the login page.  ,Failed,,,
+TC_LOCALIZATION_051,Verify system localization and language support,Multiple language packs available,System should support multiple languages and localization,"1. Open Browser
+2. Navigate to url                                      1. Login to system
+2. Change language setting to Spanish
+3. Verify interface elements are translated
+4. Check date/time format changes
+5. Test form validation messages in new language
+6. Change to French language
+7. Verify currency format localization
+8. Test email notifications in selected language","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.Language options: Spanish, French, date/currency formats","System should display correctly in selected languages, date/currency formats should localize, all interface elements should be translated","System automatically logged out the user after the inactivity period, showing the login page.  ",Passed,,,
+TC_NOTIFICATION_052,Verify email notification system functionality,Email server configured and user email addresses set,System should send appropriate email notifications for various events,"1. Open Browser
+2. Navigate to url                                  1. Configure email notifications for leave applications
+2. Employee applies for leave
+3. Verify supervisor receives email notification
+4. Supervisor approves leave
+5. Verify employee receives approval email
+6. Test timesheet submission notifications
+7. Test performance review notifications
+8. Check email template formatting","1. https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2.SMTP configuration, user email addresses, various notification triggers","Email notifications should be sent for appropriate events, emails should be properly formatted, recipients should receive timely notifications","Database backup was triggered successfully, and the backup file was generated. ",Failed,,,
+,,,,,,,,,,,
+TC_Ep1_001,Verify valid user login and logout.,1.Browser should be open.2.User should be on the home page,User must have valid username &password,"1.Open Browser
+2.Navigate to url
+3.Enter valid E-mail and password
+4.Click Login.
+5.Verify dashboard loads.
+6.Click on user profile
+7.Click on ""Logout""","1. Browser
+2.Open URL https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+3.Username: Admin
+4.Password: admin123","User Should be login successfully  and Redirected to dashboard
+and user able to Logout ",1.User Should Successfully Login and Logout .,Pass,,,
+TC_Ep2_002,Verify admin and Add new Employee and Search for Employee In employee List.,"1.Browser should be Open  with  OrangeHRM
+2.User Should be on home Page 
+3.PIM module should Enabled.","1.Verify Successful Login
+2.Search for Employee
+3.Employee details should be valid
+
+","1.Open Browser 
+2.Navigate to url 
+3.Login as Admin.
+4.Navigate to Admin 
+5.Add Employee.
+6.Enter user details and save.
+7.Navigate to Employee List, search by employee name/ID.
+8.Click on Logout
+","1.Browser 
+2.Open URL https://opensource-demo.orangehrmlive.com/web/iG56ndex.php/auth/login
+3.UserRole=Admin          4.Employee name:James Butler
+4.Status=Enabled
+5.Username=james1
+6.password:James@1234
+7.Confirm Password:James@1234","User should be logged In and  System user should be created and the result should Appear in Search results.
+
+",1.User added and displayed successfully.,Pass,,,
+TC_Ep3_003,Verify employee search in PIM widget.,"1.Browser should be Open with OrangeHRM
+2.User should be logged In.
+3.Employee account Should exist.
+4.HR admin Account should exists.","1.Verify Successful Login.
+2.Search for Employee.
+3.Employee details should be valid.
+4.Leave Type should be available.
+5.Employee should leave balance.
+","1.Open Browser
+2.Navigate to url
+3.Login as Employee
+4.Navigate to PIM 
+5.Search Employee
+6.Employe name
+7.Employee EID          8.Supervisor Name
+8.And search","1.Browser.
+2.Open URL https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+3.Employeename=Alex  Brown
+4.EmployeeID: E103
+5.SupervisorName:Jane  Smith
+
+
+",User Accounts should be exists  and  should able to search employee Information and employee data should should be found.,User Account existed  and  able to search employee Information and employee data  found below.,Pass,,,
+TC_Ep4_004,"Verify My Leave Records
+","1.Browser should be open with OrangeHRM
+2.User accounts should be exists.
+3.Leave widget should be present","1.Verify Successful Login.
+2.My Leave 
+","1.Open Browser.
+2.Navigate to url.
+3.Login as Admin.
+4.Go to My Leave
+5. Select FromDate
+6. Select ToDate
+7.Click on ""search"".
+8.Login as HR admin.
+9.Navigate to Employee Timesheets and approve timesheet.
+10.Click on ""Logout"".
+
+","1.Browser.
+2.Open URL https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+3.From Date: 2025-01-01
+4.To Date: 2025-31-12
+",User Accounts should be exists  and My Leave  should be searched by Admin and records should be displayed.,User Account existed and My Leave   searched by Admin and no records displayed.,Fail,,,
+TC_Ep5_005,"Verify customer projects
+","1.Browser should be open with OrangeHRM
+2.User accounts should be exists.
+3.Prrojects should be Assigned","1.Verify Successful Login.
+2.Employee Must enter valid project.
+","1.Open Browser.
+2.Navigate to url.
+3.Login as Employee.
+4.Go to My Time widget.
+5.Go to  Projects Info         6.Selct Projects
+7.Enter Customer Name
+8.Enter Project name
+9.click search
+
+","1.Browser.
+2.Open URL https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+3.Customer name:
+ACME Ltd                       4. Project name: 
+ACME Ltd",User Accounts should be exists  and project should be available by employee and project should be displayed with related data.,User Account exists  and project is available and project  displayed with related data.,Pass,,,

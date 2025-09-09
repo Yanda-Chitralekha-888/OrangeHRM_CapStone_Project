@@ -34,7 +34,7 @@ public class OrangeHRMTestCases extends Basetest {
 	Loginpage login;
 	static String projectpath = System.getProperty("user.dir");
 
-	@Test(dataProvider = "loginData", enabled = false)
+	@Test(dataProvider = "loginData1",priority = 1)
 	public void verifyloginTestcase1(String username, String password) throws IOException, ParserConfigurationException, SAXException, InterruptedException {
 		navigateurl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
@@ -74,7 +74,7 @@ public class OrangeHRMTestCases extends Basetest {
 
 		login.selectDropdownforlogout();
 	}
-	@Test(dataProvider = "addUserData", enabled = false)
+	@Test(dataProvider = "addUserData",priority = 2)
 	public void AddingEmployeeTestCase2(String userRole, String employeeName, String status, 
 			String username, String password, String confirmPassword) 
 					throws IOException, ParserConfigurationException, SAXException, InterruptedException {
@@ -118,20 +118,20 @@ public class OrangeHRMTestCases extends Basetest {
 		login.selectDropdownforlogout();
 	}
 
-	@Test(dataProvider = "EmployeeData", enabled = false)
+	@Test(dataProvider = "EmployeeData",priority = 3)
 	public void searchEmployeeQuickTest(String employeeName, String employeeId, String supervisorName) 
 			throws IOException, InterruptedException {
 
 		navigateurl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
-		test = extent.createTest("Search Employee Data: " + employeeName);  // Better test name
+		test = extent.createTest("Search Employee Data: " + employeeName);  
 		login = new Loginpage(driver); 
 
 		// Step 1: Login
 		login.EnterUserName("Admin");      
 		login.Enterpassword("admin123");   
 		login.Clickonlogin();
-		login.NavigateTOPIM();
+		login.NavigateTOPIM(driver);
 		login.EnterEmpname(employeeName);
 		login.EnterEmployeeID(employeeId);
 		login.EnterSuperViserName(supervisorName);
@@ -140,7 +140,7 @@ public class OrangeHRMTestCases extends Basetest {
 
 		login.selectDropdownforlogout();
 	}
-	@Test(dataProvider = "loginData1",enabled = false)
+	@Test(dataProvider = "loginData1",priority = 4)
 	public void searchEmployeeLeaveList(String username, String password) throws IOException, ParserConfigurationException, SAXException, InterruptedException {
 		navigateurl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
@@ -153,22 +153,22 @@ public class OrangeHRMTestCases extends Basetest {
 		login.Clickonlogin();
 
 		try {
-			// Step 2: Navigate to Leave and search
+			
 			System.out.println("Starting leave search...");
 			login.NavigateToLeave("2024-01-01", "2024-12-31");
 
-			// Wait for results to load
+		
 			Thread.sleep(4000);
 
-			// Step 3: Check results and handle accordingly
+			
 			List<WebElement> resultRows = driver.findElements(By.xpath("//div[@class='oxd-table-body']//div[@class='oxd-table-row oxd-table-row--with-border']"));
 
 			if (resultRows.size() > 0) {
-				// DATA FOUND - Display it
+				
 				System.out.println("LEAVE RECORDS FOUND!");
 				System.out.println("Total Records: " + resultRows.size());
 
-				// Display first 5 records
+		
 				for (int i = 0; i < Math.min(resultRows.size(), 5); i++) {
 					try {
 						WebElement row = resultRows.get(i);
@@ -234,7 +234,7 @@ public class OrangeHRMTestCases extends Basetest {
 			System.out.println("Logout completed");
 		}
 	}
-	@Test(dataProvider = "projectdata")
+	@Test(dataProvider = "projectdata",priority = 5)
 	public void searchProject(String customer, String project) throws IOException, InterruptedException {
 
 		// Navigate to login page
@@ -266,25 +266,25 @@ public class OrangeHRMTestCases extends Basetest {
 
 	@DataProvider(name = "loginData1")
 	public Object[][] loginDataProvider1() throws IOException {
-		String path = "E:\\Eclipse\\Project-OrangeHRM-master\\Project-OrangeHRM-master\\LoginDetails.xlsx";
+		String path = "E:\\Eclipse\\Project-OrangeHRM-master\\Capsotne_ProjectOrangeHRM\\LoginDetails.xlsx";
 		return Excelutilities.getdata(path, "Sheet2");
 	}
 
 	@DataProvider(name = "addUserData")
 	public Object[][] addUserDataProvider() throws IOException {
-		String path = "E:\\Eclipse\\Project-OrangeHRM-master\\Project-OrangeHRM-master\\LoginDetails.xlsx";  // Use new file
-		return Excelutilities.getdata(path, "AddUserData");  // Use new sheet name
-	}
+		String path = "E:\\Eclipse\\Project-OrangeHRM-master\\Capsotne_ProjectOrangeHRM\\adduser_data.xlsx";  
+		return Excelutilities.getdata(path, "AddUserData");  
+		}
 
 	@DataProvider(name = "EmployeeData")
 	public Object[][] employeeSearchDataProvide() throws IOException {
-		String path = "E:\\Eclipse\\Project-OrangeHRM-master\\Project-OrangeHRM-master\\LoginDetails.xlsx";
+		String path = "E:\\Eclipse\\Project-OrangeHRM-master\\Capsotne_ProjectOrangeHRM\\SearchEmployee.xlsx";
 		return Excelutilities.getdata(path, "Sheet1");
 	}
 
 	@DataProvider(name = "projectdata")
 	public Object[][] projectdata() throws IOException {
-		String path = "E:\\Eclipse\\Project-OrangeHRM-master\\Project-OrangeHRM-master\\LoginDetails.xlsx";
+		String path = "E:\\Eclipse\\Project-OrangeHRM-master\\Capsotne_ProjectOrangeHRM\\projectdata.xlsx";
 		return Excelutilities.getdata(path, "Sheet1");
 	}
 

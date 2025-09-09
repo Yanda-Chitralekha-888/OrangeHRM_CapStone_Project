@@ -5,10 +5,10 @@
     <classes>
       <class name="com.orangehrm.test.OrangeHRMTestCases">
         <methods>
+          <include name="verifyloginTestcase1" invocation-numbers="0"/>
           <include name="flushreport"/>
           <include name="setupreport"/>
           <include name="setup"/>
-          <include name="searchProject" invocation-numbers="0"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- com.orangehrm.test.OrangeHRMTestCases -->

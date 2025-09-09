@@ -1,6 +1,8 @@
 package com.orangehrm.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.devtools.v136.v136CdpInfo;
@@ -17,12 +19,12 @@ public class Loginpage {
 
 	WebDriver driver;
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-	
 
-    public Loginpage(WebDriver driver) {
-        this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-    }
+
+	public Loginpage(WebDriver driver) {
+		this.driver = driver;
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+	}
 
 
 
@@ -72,7 +74,7 @@ public class Loginpage {
 	By projectInput   = By.xpath("//label[text()='Project']/following::input[1]");
 	By searchButton   = By.xpath("//button[@type='submit' and contains(., 'Search')]");
 
-	
+
 
 
 	public void EnterUserName(String username) {
@@ -144,8 +146,8 @@ public class Loginpage {
 	}
 
 
-	// MODIFY YOUR EXISTING AddSystemUser METHOD:
-	public void AddSystemUser(String userRole) {  // Add parameter
+
+	public void AddSystemUser(String userRole) {  
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(userRoleDropdown));
 		dropdown.click();
@@ -153,15 +155,15 @@ public class Loginpage {
 		List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(userRoleOptions));
 		for (WebElement option : options) {
 			System.out.println("Option: " + option.getText());
-			if (option.getText().equals(userRole)) {  // Use parameter instead of hardcoded "Admin"
+			if (option.getText().equals(userRole)) { 
 				option.click();
 				break;
 			}
 		}
 	}
 
-	// MODIFY YOUR EXISTING SelectUserStatus METHOD:
-	public void SelectUserStatus(String status) {  // Add parameter
+
+	public void SelectUserStatus(String status) {  
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement dropdown = wait.until(ExpectedConditions.elementToBeClickable(selectStatus));
 		dropdown.click();
@@ -169,7 +171,7 @@ public class Loginpage {
 		List<WebElement> options = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(chooseStatus));
 		for (WebElement option : options) {
 			System.out.println("Option: " + option.getText());
-			if (option.getText().equals(status)) {  // Use parameter instead of hardcoded "Enabled"
+			if (option.getText().equals(status)) {  
 				option.click();
 				break;
 			}
@@ -191,7 +193,6 @@ public class Loginpage {
 		usernameFieldElement.sendKeys(username);
 	}
 
-	// Password field  
 
 	public void EnterPassword(String password) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -200,7 +201,6 @@ public class Loginpage {
 		passwordFieldElement.sendKeys(password);
 	}
 
-	// Confirm Password field
 
 	public void EnterConfirmPassword(String confirmPassword) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -209,7 +209,7 @@ public class Loginpage {
 		confirmPasswordFieldElement.sendKeys(confirmPassword);
 	}
 
-	// Save button
+
 
 
 	public void ClickSaveButton() {
@@ -220,23 +220,62 @@ public class Loginpage {
 
 
 
-	public void NavigateTOPIM() throws InterruptedException {
-		driver.findElement(NavPim).click();
-		Thread.sleep(2000);
-	}// Navigate to PIM
+	public void NavigateTOPIM(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
-	public void EnterEmpname(String employeeName) throws InterruptedException {
-		driver.findElement(NavEmpName).sendKeys(employeeName);
-		Thread.sleep(1000);
+		try {
+			// Wait until the PIM menu is visible
+			WebElement pimMenu = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='PIM']")));
+
+			// Click the PIM menu
+			pimMenu.click();
+			System.out.println("Navigated to PIM module successfully.");
+
+		} catch (Exception e) {
+			System.out.println("PIM menu not found within timeout.");
+			e.printStackTrace();
+		}
 	}
 
-	// Fill search form
+	public void EnterEmpname(String employeeName) {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+	    try {
+	        // Wait until the Employee Name input field is visible and enabled
+	        WebElement empNameInput = wait.until(ExpectedConditions.elementToBeClickable(NavEmpName));
+	        
+	        // Clear and enter the employee name
+	        empNameInput.clear();
+	        empNameInput.sendKeys(employeeName);
+	        System.out.println("Entered employee name: " + employeeName);
+
+	    } catch (TimeoutException e) {
+	        System.err.println("Timeout: Employee Name input field not clickable.");
+	        e.printStackTrace();
+
+	    } catch (NoSuchElementException e) {
+	        System.err.println("Element not found: Check if NavEmpName locator is correct.");
+	        e.printStackTrace();
+
+	    } catch (Exception e) {
+	        System.err.println("Unexpected error while entering employee name.");
+	        e.printStackTrace();
+	    }
+	}
+
+
 	public void EnterEmployeeID(String employeeID) throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+
 		driver.findElement(NavEmpId).sendKeys(employeeID);
 		Thread.sleep(1000);
 	}
 
 	public void EnterSuperViserName(String SuperViser) throws InterruptedException {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+
 		driver.findElement(NavSupName).sendKeys(SuperViser);
 		Thread.sleep(1000);
 	}
@@ -262,26 +301,26 @@ public class Loginpage {
 		searchBtn.click();
 	}
 	public void navigateToProjectSearch() {
-	    wait.until(ExpectedConditions.elementToBeClickable(navTime)).click();
-	    wait.until(ExpectedConditions.elementToBeClickable(navProjectInfo)).click();
-	    wait.until(ExpectedConditions.elementToBeClickable(projects)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(navTime)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(navProjectInfo)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(projects)).click();
 	}
 
 	public void enterCustomerName(String customer) {
-	    WebElement customerField = wait.until(ExpectedConditions.visibilityOfElementLocated(customerInput));
-	    customerField.clear();
-	    customerField.sendKeys(customer);
+		WebElement customerField = wait.until(ExpectedConditions.visibilityOfElementLocated(customerInput));
+		customerField.clear();
+		customerField.sendKeys(customer);
 	}
 
 	public void enterProjectName(String project) {
-	    WebElement projectField = wait.until(ExpectedConditions.visibilityOfElementLocated(projectInput));
-	    projectField.clear();
-	    projectField.sendKeys(project);
+		WebElement projectField = wait.until(ExpectedConditions.visibilityOfElementLocated(projectInput));
+		projectField.clear();
+		projectField.sendKeys(project);
 	}
 
 	public void clickSearchButton() {
-	    WebElement searchBtn = wait.until(ExpectedConditions.elementToBeClickable(searchButton));
-	    searchBtn.click();
+		WebElement searchBtn = wait.until(ExpectedConditions.elementToBeClickable(searchButton));
+		searchBtn.click();
 	}
 
 
@@ -293,19 +332,11 @@ public class Loginpage {
 		WebElement dropdownIcon = wait.until(ExpectedConditions.elementToBeClickable(selectDropdown));
 		dropdownIcon.click();
 
-		// Wait and click on Logout option
+
 		WebElement logout = wait.until(ExpectedConditions.elementToBeClickable(logoutOption));
 		logout.click();
 
 		System.out.println("Logout option clicked successfully.");
 	}
 
-
-
-
-
-
 }
-
-
-
