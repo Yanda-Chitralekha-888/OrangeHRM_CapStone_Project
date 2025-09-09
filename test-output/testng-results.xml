@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="5" passed="0" failed="5" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-09T09:27:33 IST" name="Suite" finished-at="2025-09-09T09:30:09 IST" duration-ms="156452">
+  <suite started-at="2025-09-09T09:59:15 IST" name="Suite" finished-at="2025-09-09T10:01:52 IST" duration-ms="156934">
     <groups>
     </groups>
-    <test started-at="2025-09-09T09:27:33 IST" name="Test" finished-at="2025-09-09T09:30:09 IST" duration-ms="156452">
+    <test started-at="2025-09-09T09:59:15 IST" name="Test" finished-at="2025-09-09T10:01:52 IST" duration-ms="156934">
       <class name="com.orangehrm.test.OrangeHRMTestCases">
-        <test-method is-config="true" signature="setupreport()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:27:33 IST" name="setupreport" finished-at="2025-09-09T09:27:33 IST" duration-ms="197" status="PASS">
+        <test-method is-config="true" signature="setupreport()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T09:59:15 IST" name="setupreport" finished-at="2025-09-09T09:59:15 IST" duration-ms="197" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setupreport -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:27:34 IST" name="setup" finished-at="2025-09-09T09:27:35 IST" duration-ms="1483" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T09:59:16 IST" name="setup" finished-at="2025-09-09T09:59:18 IST" duration-ms="1911" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyloginTestcase1(java.lang.String,java.lang.String)[pri:1, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:27:35 IST" name="verifyloginTestcase1" data-provider="loginData1" finished-at="2025-09-09T09:28:05 IST" duration-ms="30028" status="FAIL">
+        <test-method signature="verifyloginTestcase1(java.lang.String,java.lang.String)[pri:1, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T09:59:18 IST" name="verifyloginTestcase1" data-provider="loginData1" finished-at="2025-09-09T09:59:48 IST" duration-ms="30018" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -30,24 +30,24 @@
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[timeout: Timed out receiving message from renderer: 28.042
+              <![CDATA[timeout: Timed out receiving message from renderer: 26.115
   (Session info: chrome=139.0.7258.157)
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [54f9f8cf778ca7f84336413690923456, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56134}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56134/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 54f9f8cf778ca7f84336413690923456]]>
+Command: [d9176d23ccc7cf2631b5ab01b4e7198d, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56557}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56557/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d9176d23ccc7cf2631b5ab01b4e7198d]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 28.042
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 26.115
   (Session info: chrome=139.0.7258.157)
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [54f9f8cf778ca7f84336413690923456, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56134}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56134/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 54f9f8cf778ca7f84336413690923456
+Command: [d9176d23ccc7cf2631b5ab01b4e7198d, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56557}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56557/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d9176d23ccc7cf2631b5ab01b4e7198d
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -97,15 +97,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyloginTestcase1 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:28:05 IST" name="teardown" finished-at="2025-09-09T09:28:05 IST" duration-ms="204" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T09:59:48 IST" name="teardown" finished-at="2025-09-09T09:59:48 IST" duration-ms="157" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:28:05 IST" name="setup" finished-at="2025-09-09T09:28:06 IST" duration-ms="861" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T09:59:48 IST" name="setup" finished-at="2025-09-09T09:59:49 IST" duration-ms="786" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="AddingEmployeeTestCase2(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:28:06 IST" name="AddingEmployeeTestCase2" data-provider="addUserData" finished-at="2025-09-09T09:28:36 IST" duration-ms="30012" status="FAIL">
+        <test-method signature="AddingEmployeeTestCase2(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T09:59:49 IST" name="AddingEmployeeTestCase2" data-provider="addUserData" finished-at="2025-09-09T10:00:19 IST" duration-ms="30008" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -140,24 +140,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[timeout: Timed out receiving message from renderer: 27.290
+              <![CDATA[timeout: Timed out receiving message from renderer: 28.808
   (Session info: chrome=139.0.7258.157)
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [131208a3e1d841212a32c53438a26d19, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56163}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56163/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 131208a3e1d841212a32c53438a26d19]]>
+Command: [db8636f2f26b4dd1f748e372517b25fb, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56577}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56577/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: db8636f2f26b4dd1f748e372517b25fb]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 27.290
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 28.808
   (Session info: chrome=139.0.7258.157)
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [131208a3e1d841212a32c53438a26d19, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56163}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56163/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 131208a3e1d841212a32c53438a26d19
+Command: [db8636f2f26b4dd1f748e372517b25fb, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56577}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56577/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: db8636f2f26b4dd1f748e372517b25fb
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -207,15 +207,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddingEmployeeTestCase2 -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:28:36 IST" name="teardown" finished-at="2025-09-09T09:28:36 IST" duration-ms="136" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T10:00:19 IST" name="teardown" finished-at="2025-09-09T10:00:19 IST" duration-ms="183" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:28:36 IST" name="setup" finished-at="2025-09-09T09:28:37 IST" duration-ms="868" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T10:00:19 IST" name="setup" finished-at="2025-09-09T10:00:20 IST" duration-ms="755" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="searchEmployeeQuickTest(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:28:37 IST" name="searchEmployeeQuickTest" data-provider="EmployeeData" finished-at="2025-09-09T09:29:07 IST" duration-ms="30018" status="FAIL">
+        <test-method signature="searchEmployeeQuickTest(java.lang.String,java.lang.String,java.lang.String)[pri:3, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T10:00:20 IST" name="searchEmployeeQuickTest" data-provider="EmployeeData" finished-at="2025-09-09T10:00:50 IST" duration-ms="30021" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -235,24 +235,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[timeout: Timed out receiving message from renderer: 28.475
+              <![CDATA[timeout: Timed out receiving message from renderer: 28.569
   (Session info: chrome=139.0.7258.157)
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f86402769b8e76d0f008436b548f651f, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56184}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56184/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f86402769b8e76d0f008436b548f651f]]>
+Command: [cae83b217f3d6296428030c0a9aa5a23, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56602}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56602/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cae83b217f3d6296428030c0a9aa5a23]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 28.475
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 28.569
   (Session info: chrome=139.0.7258.157)
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f86402769b8e76d0f008436b548f651f, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56184}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56184/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f86402769b8e76d0f008436b548f651f
+Command: [cae83b217f3d6296428030c0a9aa5a23, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56602}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56602/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: cae83b217f3d6296428030c0a9aa5a23
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -302,15 +302,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchEmployeeQuickTest -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:29:07 IST" name="teardown" finished-at="2025-09-09T09:29:08 IST" duration-ms="195" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T10:00:50 IST" name="teardown" finished-at="2025-09-09T10:00:50 IST" duration-ms="165" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:29:08 IST" name="setup" finished-at="2025-09-09T09:29:08 IST" duration-ms="754" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T10:00:50 IST" name="setup" finished-at="2025-09-09T10:00:51 IST" duration-ms="793" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="searchEmployeeLeaveList(java.lang.String,java.lang.String)[pri:4, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:29:08 IST" name="searchEmployeeLeaveList" data-provider="loginData1" finished-at="2025-09-09T09:29:38 IST" duration-ms="30020" status="FAIL">
+        <test-method signature="searchEmployeeLeaveList(java.lang.String,java.lang.String)[pri:4, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T10:00:51 IST" name="searchEmployeeLeaveList" data-provider="loginData1" finished-at="2025-09-09T10:01:21 IST" duration-ms="30017" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -325,24 +325,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[timeout: Timed out receiving message from renderer: 28.681
+              <![CDATA[timeout: Timed out receiving message from renderer: 28.253
   (Session info: chrome=139.0.7258.157)
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ccb8ad22c19e17a8456bd7b63d7cd7c9, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56232}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56232/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ccb8ad22c19e17a8456bd7b63d7cd7c9]]>
+Command: [d4a93f570c61ca79754abf0232218d2e, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56624}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56624/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d4a93f570c61ca79754abf0232218d2e]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 28.681
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 28.253
   (Session info: chrome=139.0.7258.157)
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ccb8ad22c19e17a8456bd7b63d7cd7c9, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56232}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56232/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ccb8ad22c19e17a8456bd7b63d7cd7c9
+Command: [d4a93f570c61ca79754abf0232218d2e, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56624}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56624/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: d4a93f570c61ca79754abf0232218d2e
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -392,15 +392,15 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchEmployeeLeaveList -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:29:38 IST" name="teardown" finished-at="2025-09-09T09:29:39 IST" duration-ms="177" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T10:01:21 IST" name="teardown" finished-at="2025-09-09T10:01:21 IST" duration-ms="162" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:29:39 IST" name="setup" finished-at="2025-09-09T09:29:39 IST" duration-ms="755" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T10:01:21 IST" name="setup" finished-at="2025-09-09T10:01:22 IST" duration-ms="858" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="searchProject(java.lang.String,java.lang.String)[pri:5, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:29:39 IST" name="searchProject" data-provider="projectdata" finished-at="2025-09-09T09:30:09 IST" duration-ms="30008" status="FAIL">
+        <test-method signature="searchProject(java.lang.String,java.lang.String)[pri:5, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T10:01:22 IST" name="searchProject" data-provider="projectdata" finished-at="2025-09-09T10:01:52 IST" duration-ms="30018" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -415,24 +415,24 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           </params>
           <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[timeout: Timed out receiving message from renderer: 27.466
+              <![CDATA[timeout: Timed out receiving message from renderer: 27.788
   (Session info: chrome=139.0.7258.157)
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ba97883d6d0bea67b652ccc6653f2a2b, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56251}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56251/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ba97883d6d0bea67b652ccc6653f2a2b]]>
+Command: [1a31ef81f29a5d8ec75839be3d1610aa, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56650}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56650/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1a31ef81f29a5d8ec75839be3d1610aa]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 27.466
+              <![CDATA[org.openqa.selenium.TimeoutException: timeout: Timed out receiving message from renderer: 27.788
   (Session info: chrome=139.0.7258.157)
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [ba97883d6d0bea67b652ccc6653f2a2b, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56251}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56251/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: ba97883d6d0bea67b652ccc6653f2a2b
+Command: [1a31ef81f29a5d8ec75839be3d1610aa, get {url=https://opensource-demo.orangehrmlive.com/web/index.php/auth/login}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 139.0.7258.157, chrome: {chromedriverVersion: 139.0.7258.154 (9e0d6b2b47f..., userDataDir: C:\Users\YC51B~1.CHI\AppDat...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56650}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56650/devtoo..., se:cdpVersion: 139.0.7258.157, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 1a31ef81f29a5d8ec75839be3d1610aa
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -482,11 +482,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProject -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:30:09 IST" name="teardown" finished-at="2025-09-09T09:30:09 IST" duration-ms="148" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T10:01:52 IST" name="teardown" finished-at="2025-09-09T10:01:52 IST" duration-ms="213" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="flushreport()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@bccb269]" started-at="2025-09-09T09:30:09 IST" name="flushreport" finished-at="2025-09-09T09:30:10 IST" duration-ms="268" status="PASS">
+        <test-method is-config="true" signature="flushreport()[pri:0, instance:com.orangehrm.test.OrangeHRMTestCases@385e9564]" started-at="2025-09-09T10:01:52 IST" name="flushreport" finished-at="2025-09-09T10:01:53 IST" duration-ms="526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- flushreport -->
