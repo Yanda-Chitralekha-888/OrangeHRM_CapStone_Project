@@ -32,16 +32,12 @@ public class Basetest {
 
         // Setup ChromeDriver
         WebDriverManager.chromedriver().setup();
-
-        // Add Chrome options
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--remote-allow-origins=*");   // required for latest Chrome
-        // options.addArguments("--headless=new");          // uncomment if you need headless mode (Jenkins/CI)
-
-        driver = new ChromeDriver(options);
+        	driver=new ChromeDriver();
+      
+   
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        //driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds());
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
     public void navigateurl(String url) {

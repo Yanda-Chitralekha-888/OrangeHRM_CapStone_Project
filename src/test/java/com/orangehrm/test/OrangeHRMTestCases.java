@@ -8,6 +8,7 @@ import com.orangehrm.pages.Loginpage;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 import java.util.Set;
 
@@ -36,6 +37,7 @@ public class OrangeHRMTestCases extends Basetest {
 
 	@Test(dataProvider = "loginData1",priority = 1)
 	public void verifyloginTestcase1(String username, String password) throws IOException, ParserConfigurationException, SAXException, InterruptedException {
+		// driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		navigateurl("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
 		test = extent.createTest("Login with the user: " + username);
@@ -92,16 +94,16 @@ public class OrangeHRMTestCases extends Basetest {
 		login.ClickAddOption();
 
 		login.AddSystemUser(userRole);          
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 
 		login.SelectUserStatus(status);          
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 
 		login.AddEmployeeName(employeeName);     
-		Thread.sleep(2000);
+		Thread.sleep(3000);
 
 		login.EnterUsername(username);          
-		Thread.sleep(1000);
+		Thread.sleep(3000);
 
 		login.EnterPassword(password);           
 		Thread.sleep(1000);
